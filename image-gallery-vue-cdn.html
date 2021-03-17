@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//unpkg.com/viewerjs/dist/viewer.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="//unpkg.com/vue/dist/vue.js"></script>
+    <script src="//unpkg.com/viewerjs/dist/viewer.js"></script>
+    <script src="//unpkg.com/v-viewer/dist/v-viewer.js"></script>
+    <div id="app">
+        <div v-viewer class="images clearfix">
+            <template v-for="image in images">
+                <img :src="image" class="image" :key="image">
+            </template>
+        </div>
+    </div>
+    <script>
+        Vue.use(VueViewer.default)
+        console.log(VueViewer.default)
+        var Main = {
+            methods: {
+                toggle() {
+
+                }
+            },
+            data() {
+                return {
+                    images: [
+                        'https://picsum.photos/200/200',
+                        'https://picsum.photos/300/200',
+                        'https://picsum.photos/250/200',
+                        'https://placekitten.com/801/800',
+                        'https://placekitten.com/802/800',
+                        'https://placekitten.com/803/800',
+                        'https://placekitten.com/804/800',
+                        'https://placekitten.com/805/800',
+                        'https://placekitten.com/806/800',
+                        'https://placekitten.com/807/800',
+                        'https://placekitten.com/808/800',
+                        'https://placekitten.com/809/800',
+                        'https://placekitten.com/810/800'
+                    ]
+                }
+            }
+        }
+        var App = Vue.extend(Main)
+        new App().$mount('#app')
+    </script>
+</body>
+
+</html>
