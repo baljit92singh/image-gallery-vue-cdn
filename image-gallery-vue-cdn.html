@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="//unpkg.com/viewerjs/dist/viewer.css" rel="stylesheet">
+<!--     <link href="//unpkg.com/viewerjs/dist/viewer.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/viewerjs/dist/viewer.css" rel="stylesheet">
+    
 </head>
 
 <body>
-    <script src="//unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/viewerjs@1.9.0/dist/viewer.js"></script>
+    <script src="https://unpkg.com/v-viewer/dist/v-viewer.js"></script>
+<!--     <script src="//unpkg.com/vue/dist/vue.js"></script>
     <script src="//unpkg.com/viewerjs/dist/viewer.js"></script>
-    <script src="//unpkg.com/v-viewer/dist/v-viewer.js"></script>
+    <script src="//unpkg.com/v-viewer/dist/v-viewer.js"></script> -->
     <div id="app">
         <div v-viewer class="images clearfix">
             <template v-for="image in images">
